@@ -22,7 +22,9 @@ export class AppComponent {
     private readonly resizeService: ResizeService
   ) {
     // Mouse coordinates {x: 0, y: 0}, remove if not needed
-    this.mouseService.mouseCoordinates$.subscribe(console.log);
+    this.mouseService.mouseCoordinates$.subscribe(() => {
+      // Use mouse coords
+    });
 
     if (!this.canvasRenderer) return;
     this.canvasResizeListener();
